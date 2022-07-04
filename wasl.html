@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="wasl.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="logo"><img src="image/newlogo.png" alt="logo"></a>
+            <a href="#home">Home</a>
+            <a href="#Ride">Ride</a>
+            <a href="#Services">Services</a>
+            <a href="#About">About</a>
+            <a href="#Reviews">Reviews</a>
+            <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            <button class="btn">Logout</button>
+            <div class="dropdown btn">
+                <button class="dropbtn">inbox
+                    <span class="badge">3</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">car will arive after 7 killo</a>
+                    <a href="#">car will arive after 5 killo</a>
+                    <a href="#">car will arive after 3killo</a>
+                </div>
+            </div>
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="image/wasl.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="contain">
+                        <h2>deliver safe and fast</h2>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit" class="button">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="contain" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+
+        </div>
+    </header>
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>looking</span> for car to <br>deliver your things <br></h1>
+            <p>Our company offers you the service of delivering your things at any time and to any place</p>
+            <div class="app-stores">
+                <img src="image/ios.png" alt="">
+                <img src="image/play.png" alt="">
+
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="">
+                <div class="input-box">
+                    <span>location</span>
+                    <input type="text" name="" id="" placholder="search places">
+                </div>
+                to
+                <div class="input-box">
+                    <span>location</span>
+                    <input type="text" name="" id="" placholder="search places">
+                </div>
+                <div class="input-box">
+                    <span>Pick-up date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>time</span>
+                    <input type="time" name="" id="">
+                </div>
+                <input type="submit" name="" value="Upload" id="" class="btn">
+            </form>
+        </div>
+    </section>
+    <!--Ride-->
+    <section class="ride" id="Ride">
+        <div class="heading">
+            <span>How its Work</span>
+            <h1>Send with 3 easy steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <i class="bx bxs-map"></i>
+                <h2>Choose A Location</h2>
+                <p>You can choose the location to which you want to send the goods and which position will be available
+                </p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-calendar-alt'></i>
+                <h2>Pick-up date date</h2>
+                <p>Determine the appropriate time you want to send the goods and the date of the driver's return</p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-calendar-star'></i>
+                <h2>Book A Car</h2>
+                <p>Reserve the car in which you want to send the goods, and the time, place and destination that suits you
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--services-->
+    <section class="cards" id="Services">
+        <div class="heading">
+            <span>best services</span>
+            <h1>Explore out top deals <br> From Top Rated Dealers</h1>
+        </div>
+        <div class="container">
+
+            <div class="card">
+                <div class="icon">
+                    <img src="image/delivery.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>zag to cairo</h3>
+                    <p>
+                        Cost 14$ <br>
+                        group of individuals involved in persistent social
+                        interaction, or a large social group sharing the same geographical or social territory,
+                        typically subject to the same political authority
+                        and dominant cultural expectations.
+                        Societies are characterized by patterns of relationships (social relations)
+                        between individuals who share a distinctive culture and institutions;
+                        <button class="book" onclick="document.getElementById('id02').style.display='block'"
+                        style="width:auto;">booking</button>
+                    </p>
+                </div>
+                <a class="more"></a>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="image/orange.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Alex to minia</h3>
+                    <p>
+                        Cost 13$ <br>
+                        group of individuals involved in persistent social
+                        interaction, or a large social group sharing the same geographical or social territory,
+                        typically subject to the same political authority
+                        and dominant cultural expectations.
+                        Societies are characterized by patterns of relationships (social relations)
+                        between individuals who share a distinctive culture and institutions;
+                        <button class="book" onclick="document.getElementById('id02').style.display='block'"
+                        style="width:auto;">booking</button>
+                       
+
+                    </p>
+                </div>
+                <a class="more"></a>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="image/motosikl.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>por-saied to mansora</h3>
+                    <p>
+                        Cost 10$ <br>
+                        group of individuals involved in persistent social
+                        interaction, or a large social group sharing the same geographical or social territory,
+                        typically subject to the same political authority
+                        and dominant cultural expectations.
+                        Societies are characterized by patterns of relationships (social relations)
+                        between individuals who share a distinctive culture and institutions;
+                        <button class="book" onclick="document.getElementById('id02').style.display='block'"
+                        style="width:auto;">booking</button>
+
+                    </p>
+                </div>
+                <a class="more"></a>
+
+            </div>
+
+        </div>
+        <div id="id02" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="image/buy.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="contain">
+                    <h2>book with the shipest cost</h2>
+                    <label for="uname"><b>Card Number</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="date">date</label>
+                    <input type="date" placeholder="Eenter Date">
+
+                    <button type="submit" class="button">buy</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="contain" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--about-->
+    <section class="about" id="About">
+        <div class="heading">
+            <span>About us</span>
+            <h1>best customer expirence</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="image/beb.png" alt="car" style="width:100%;">
+            </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <p>If you forgot your goods in another country and would like to return it, or if you want to send your goods to people in other countries </p>
+                <p>if you are fed up with the cost of shipping companies We offer you the service of sending and receiving your goods at the lowest costs and in the fastest time</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!--reviews-->
+    <section class="reviews" id="Reviews">
+        <div class="heading">
+            <span>Rviews</span>
+            <h1>what a customer say ?</h1>
+        </div>
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="image/ali.jpg" alt="">
+                </div>
+                <h2>Eiad nasar</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>This is what I was waiting for. Thank you. A fast and reliable company, and the price is unbelievable
+                </p>
+
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="image/yousef.jpg" alt="">
+                </div>
+                <h2>Ali hassan</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>This is what I was waiting for. Thank you. A fast and reliable company, and the price is unbelievable
+                </p>
+
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="image/mazin.jpg" alt="">
+                </div>
+                <h2>Mazin Ahmous</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>This is what I was waiting for. Thank you. A fast and reliable company, and the price is unbelievable
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--nwsletter-->
+    <section class="newsletter">
+        <h2>Subscribe to newsletter</h2>
+        <div class="box">
+            <input type="text" placeholder="Enter Your Email">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>@All right Reserved</p>
+        <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+
+        </div>
+    </div>
+    <!--scroll reval-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="game.js"></script>
+    <script>
+        let more = document.querySelectorAll('.more');
+        for (let i = 0; i < more.length; i++) {
+            more[i].addEventListener('click', function() {
+                more[i].parentNode.classList.toggle('active')
+            })
+        }
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

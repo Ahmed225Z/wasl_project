@@ -1,0 +1,940 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #83a9c5;
+    --second-color: #7438ff;
+    --text-color: #444;
+    --gradient: linear-gradient(#573dfe, #7438ff);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section {
+    padding: 50px 100px;
+    width: 100%;
+    float: left;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 2px 40px;
+}
+
+
+
+/* Style for Responive Navigation bar */
+
+.topnav a {
+    text-shadow: 1px 1px 10px rgb(60, 60, 210);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child),
+    .topnav button,
+    .dropdown {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive button {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.logo img {
+    width: 60px;
+}
+
+.header-btn,
+.btn {
+    float: left;
+    padding: 8px 7px;
+    font-size: 15px;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    float: right;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 6px 41px;
+    font-family: inherit;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(to top right, #5678c3, #c8d2e8);
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropbtn .badge {
+    position: relative;
+    top: -9px;
+    right: -47px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*End Style for Responive Navigation bar */
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(image/wasly.png);
+    background-repeat: no-repeat;
+    background-position: bottom 114px right 50px;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* background-attachment: fixed; */
+    background-size: 20cm;
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text p {
+    margin: 00.5rem 0 1rem;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 10px blue; */
+}
+
+.app-stores {
+    display: flex;
+}
+
+.app-stores img {
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 14px;
+    background: #fff;
+    padding: 22px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px rgb(29 40 141);
+}
+
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 10px;
+}
+
+.input-box span {
+    font-weight: 500;
+}
+
+.input-box input {
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-container form .btn {
+    flex: 1 1 7rem;
+    padding: 18px 34px;
+    border: none;
+    border-radius: 0.5rem;
+    background: #2c74df;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form-container form .btn:hover {
+    background-color: var(--main-color);
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1 {
+    font-size: 2rem;
+}
+
+.text {
+    position: relative;
+    left: -64px;
+    top: -42px;
+}
+
+.ride-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ride-container .box {
+    text-align: center;
+    padding: 20px;
+}
+
+.ride-container .box .bx {
+    font-size: 34px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+
+.ride-container .box h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+
+.ride-container .box .bx:hover,
+.ride-container.bx .bxs-calendar-star {
+    background: var(--gradient);
+    color: #fff;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    margin-top: 2rem;
+}
+
+.service-container .box {
+    padding: 50px 50px 50px 50px;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+}
+
+.service-container .box .box-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-container .box p {
+    padding: 0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+
+.service-container .box h3 {
+    font-weight: 500;
+}
+
+.service-container .box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 0.2rem 0 0.5rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.card {
+    box-shadow: 1px 1px 10px rgb(116, 123, 120);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.about-img :hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.about-text span {
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.about-text p {
+    margin: 0.5rem 0 1.4rem;
+}
+
+.about-text .btn {
+    padding: 10px 20px;
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.about-text .btn:hover {
+    background: var(--main-color);
+}
+
+.about-text {
+    position: relative;
+    left: 40px
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.rev-img {
+    width: 70px;
+    height: 70px;
+}
+
+.rev-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #5f5e62
+}
+
+.reviews-container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgb(116, 123, 120);
+    border-radius: 0.5rem;
+}
+
+.reviews-container .box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.about-container .box p {
+    font-style: italic;
+}
+
+.reviews-container .box .stars .bx {
+    color: var(--main-color);
+}
+
+.newsletter {
+    background: linear-gradient(to top right, #757a85, #829ccf);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter .box {
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 4px 8px;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.newsletter .box input {
+    border: none;
+    outline: none;
+}
+
+.newsletter .box .btn {
+    background: rgb(131 136 191);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+}
+
+.newsletter h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.copyright {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social a {
+    color: #444;
+    padding: 10px;
+    font-size: 21px;
+}
+
+
+/*responsive*/
+
+@media(max-width:991px) {
+    section {
+        padding: 50px 40px;
+    }
+}
+
+@media(max-width:881px) {
+    .form-container form {
+        bottom: 0.2rem;
+        left: 40px;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-icon {
+        display: block;
+    }
+    .sign-out {
+        display: none;
+    }
+    text h21 {
+        font-size: 2.5rem;
+    }
+    .home {
+        grid-template-columns: 1fr;
+    }
+    .form-container form {
+        position: unset;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(0, 0, 0, 0.1);
+        transition: 0.2s ease;
+        text-align: left;
+    }
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+
+.button {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 6px 41px;
+    /* background-color: rgb(129 19 233 / 17%); */
+    font-family: inherit;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(to top right, #5678c3, #c8d2e8);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%;
+    /* Full width */
+    height: 50%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.modal-content animate {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.container h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-btn .sign-out {
+    color: #888;
+}
+
+#more {
+    display: none;
+}
+
+.btn-info {
+    background-color: red;
+}
+
+
+/* .container */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(74 60 60);
+}
+
+.container .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid rgb(203, 206, 220);
+    border-top: 20px solid rgb(217, 218, 248);
+}
+
+.container .card.active::before {
+    border-top: 20px solid crimson;
+    ;
+}
+
+.container .card .icon {
+    margin-bottom: 10px;
+}
+
+.container .card .icon img {
+    max-width: 90px;
+}
+
+.container .card .content {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.container .card .content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #3f3f3f);
+}
+
+.container .card .content h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.container .card .content p {
+    color: rgb(173 179 189);
+    font-weight: 300;
+}
+
+.container .card .more {
+    width: 35%;
+    position: relative;
+    padding: 10px 15px;
+    background-color: rgb(217, 218, 248);
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    color: rgb(144, 145, 146);
+    font-weight: bold;
+    /* letter-spacing: 2px; */
+    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+.container .card .more::before {
+    content: 'details';
+    font-weight: bold;
+}
+
+.container .card.active .more::before {
+    content: 'perview';
+    font-weight: bold;
+}
+
+.container .card.active .more {
+    background: crimson;
+    color: #fff;
+}
+
+.container .card .content {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.container .card.active .content {
+    height: auto;
+}
+.book {
+    width: 35%;
+    /* position: relative;
+    right: -91px;
+    top: -47px; */
+    margin: 5px;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(217, 218, 248);
+    font-weight: bold;
+    color: rgb(144, 145, 146);
+    border: none;
+
+}
+.container .card.active .content::before {
+    display: none;}
+    .modal-content animate {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+    
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+.contain h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+/* .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+} */
